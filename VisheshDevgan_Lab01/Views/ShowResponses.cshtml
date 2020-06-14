@@ -1,0 +1,38 @@
+﻿@model IEnumerable<VisheshDevgan_Lab01.Models.ParticipantsResponse>
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Responses</title>
+</head>
+
+<body>
+    <h2>Here is the list of participants for the yoga class</h2>
+    <table>
+        <thread>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thread>
+        <tbody>
+            @foreach(VisheshDevgan_Lab01.Models.ParticipantsResponse r in Model)
+            {
+                <tr>
+                    <td>@r.Name</td><td>@r.Email</td><td>@r.Phone</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</body>
+</html>

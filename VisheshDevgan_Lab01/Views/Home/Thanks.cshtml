@@ -1,0 +1,30 @@
+﻿@model VisheshDevgan_Lab01.Models.ParticipantsResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Thanks</title> 
+    </head>
+
+    <body>
+        <p>
+            <h1>Thank you, @Model.Name!</h1>
+            @if (Model.WillAttend == true)
+            {
+                @:Glad that you are coming. If you wish, you can bring your own yoga mat!
+            }
+
+            else
+            {
+                @:Sorry to hear that you would not come. Hope to see you next time, Namaste!
+            }
+
+        </p>
+        <p>Click <a asp-"action="ShowResponses">here</a> to see who is coming.</p>
+    </body>
+</html>
