@@ -46,6 +46,11 @@ namespace VisheshDevgan_Lab01.Controllers
         {
             return View(Repository.Responses.Where(r => r.WillAttend == true));
         }
+
+        public ViewResult Privacy()
+        {
+            return View();
+        }
     
     
     }

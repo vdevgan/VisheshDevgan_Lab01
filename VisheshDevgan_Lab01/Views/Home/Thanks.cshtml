@@ -1,4 +1,4 @@
-﻿@model VisheshDevgan_Lab01.Models.ParticipantsResponse
+﻿@model ParticipantsResponse
 
 @{
     Layout = null;
@@ -6,14 +6,15 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Thanks</title> 
-    </head>
+<head>
+    <meta name=" viewport" content="width=device-width" />
+    <title>Hey</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
 
-    <body>
+    <body class=" text-center">
         <p>
-            <h1>Thank you, @Model.Name!</h1>
+            <h3>Thank you, @Model.Name!</h3>
             @if (Model.WillAttend == true)
             {
                 @:Glad that you are coming. If you wish, you can bring your own yoga mat!
@@ -25,6 +26,8 @@
             }
 
         </p>
-        <p>Click <a asp-"action="ShowResponses">here</a> to see who is coming.</p>
+        <div>
+            <a class="nav-link" asp-action="ShowResponses"> Click here  to see who is coming.</a>
+        </div>
     </body>
 </html>

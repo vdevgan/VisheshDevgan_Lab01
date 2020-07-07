@@ -1,42 +1,58 @@
-﻿@model VisheshDevgan_Lab01.Models.ParticipantsResponse
-
-@{ Layout = null;}
+﻿@model ParticipantsResponse
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name = "viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
     <title>Yoga Class</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
-    <div>
-        Please fill the 20th June Yoga class participation form here:
-        <form asp-action="RsvpForm" method="post">
-            <div asp-validation-summary="All" :></div>
-            <p>
-                <label asp-for="Name">Enter your name:</label>
-                <input asp-for="Name" />
-            </p>
 
-            <p>
+    <div class="panel-heading text-center">
+        <h4> Please fill the 20th June Yoga class participation form here:</h4>
+    </div>
+
+    <div class="panel-body">  
+        <form asp-action="RsvpForm" method="post">
+
+            <div asp-validation-summary="All"></div>
+
+            <div class="form-group">
+                <label asp-for="Name">Enter your name:</label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+
+            <div class="form-group">
                 <label asp-for="Phone">Enter your Phone:</label>
-                <input asp-for="Phone" />
-            </p>
-            <p>
+                <input class="form-control" asp-for="Phone" />
+            </div>
+
+            <div class="form-group">
                 <label asp-for="Email">Enter your Email:</label>
-                <input asp-for="Email" />
-            </p>
-            <p>
+                <input class="form-control" asp-for="Email" />
+            </div>
+
+            <div class="form-group">
                 <label>Will you be present?</label>
-                <select asp-for="WillAttend">
+                <select class = "form-control" asp-for="WillAttend">
                     <option value="">Choose an option</option>
                     <option value="True">Yes</option>
                     <option value="False">No</option>
                 </select>
-            </p>
-            <button type="submit">Submit</button>
+            </div>
+           
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">
+                Submit
+                </button>
+            </div>
+
         </form>
     </div>
+
+
 </body>
 </html>

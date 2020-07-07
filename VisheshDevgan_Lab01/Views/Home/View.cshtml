@@ -1,22 +1,20 @@
-﻿@{ 
-   Layout = null;
-    
-}
-
-<html>
+﻿<html>
 <head>
+    <meta name=" viewport" content="width=device-width" />
     <title>Hey</title>
+    <link rel="stylesheet" href ="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
-        <h1>Yoga Class enrollment</h1>
+    <div class="text-center">
+        
+        <h3>Yoga Class enrollment</h3>
        
         <p>
             Hello! @ViewBag.Greeting
             <br /> This is the enrolment form to join the 20th June yoga class.
         </p>
 
-        <a asp-action="RsvpForm">Click HERE to Enroll</a>
+        <a class="btn btn-primary" asp-action="RsvpForm">Enroll</a>
     </div>
 </body>
 </html>
